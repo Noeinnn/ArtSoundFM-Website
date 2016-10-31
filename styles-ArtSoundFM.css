@@ -1,0 +1,961 @@
+@charset "utf-8";
+/* CSS Document */
+/* Jason Nguyen u3117696 */
+
+
+
+/* Table of Contents:
+	1. Reset CSS
+	2. Base Styles
+	3. Navigation
+	4. Header
+	5. Sidebar
+	6. Introduction
+	7. Home page: Notices & Upcoming Events
+    8. Home page: Weekly Notices
+    9. Art Diaries
+    10. Membership
+    11. Footer
+    12. Media Queries
+*/
+
+
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css?family=Bitter|Gurajada|Jaldi:400,700|Yantramanav:300');
+
+/* Fonts received from https://fonts.google.com/ */
+
+/*
+font-family: 'Bitter', serif; Main Title
+font-family: 'Gurajada', serif; Headings
+font-family: 'Jaldi', sans-serif; 400,700  Sub Headings
+font-family: 'Yantramanav', sans-serif; 300 Paragraphs
+*/
+
+
+
+
+/* 1. RESET CSS ---------------------------------------- */
+
+/* Reset CSS received from http://cssreset.com/scripts/eric-meyer-reset-css */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* 2. BASE STYLES ---------------------------------------- */
+
+h1{
+    font-size: 2.25em;
+    color: #1e73be;
+    font-family: 'Bitter', serif;
+}
+
+h2{
+    font-size: 2em;
+    color: #3e3e3e; 
+    font-family: 'Gurajada', serif;
+}
+
+h3{
+    font-size: 1.25em;
+    font-weight: 700;  
+/*    color: #3e3e3e; */
+    color: #1e73be;
+/*    color: #b6d2e9;*/
+    font-family: 'Jaldi', sans-serif;
+}
+
+p{
+   color: #3e3e3e; 
+    font-family: 'Yantramanav', sans-serif;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+    font-family: 'Jaldi', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Jaldi', sans-serif;
+/*    font-family: 'Yantramanav', sans-serif;*/
+    font-size: 1.1em;
+    color: #ff9300;
+}
+
+a:hover {
+    color: #5ce6b7;
+}
+
+body {
+    background: #5393a0 url(http://i.imgur.com/65CZmlx.png);
+}
+
+.wrapper {
+    background: white;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+img { 
+    max-width: 100%; height: auto; 
+}
+
+
+
+
+/* 3. NAVIGATION ---------------------------------------- */
+
+nav {
+    float: right;
+    width: 100%;
+    font-size: 1.15em;
+}
+
+    nav li {
+        margin: 0.45em 0;
+        float: left;
+        display: block;
+        width: 100%;
+    }
+
+        nav a {
+            color:#1e73be;
+            transition: 0.3s;
+        }
+
+            nav a:hover {
+                color: #ff9300;
+            }
+
+
+.active {
+    color: #ff9300;
+}
+
+
+/* Search Bar*/
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+header input {
+    background: none;
+    border: none;
+    font-size: 0.8em;
+}
+
+
+/* Hide Hamburger Icon while not the correct width */
+ul.topnav li.icon {
+    display: none;
+}
+
+ul.topnav {
+    overflow: hidden;
+}
+
+
+
+
+/* 4. HEADER ---------------------------------------- */
+
+header {
+    background: #ffffff;
+    background-image: url(http://i.imgur.com/NCWCG2h.png);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    padding: 2%;
+    margin: 0 0 1.25em 0;
+    float: left;
+    width: 26%;
+    height: 27em;
+}
+
+    header h1 {
+        margin: 0.25em 0 0.5em 0;
+    }
+
+
+
+
+/* 5. SIDEBAR ---------------------------------------- */
+
+.sidebar {
+    width: 60%;
+    height: 12em;
+    float: left;
+    padding: 2em;
+    background: white;
+}
+
+    .sidebar h2 {
+    }
+
+
+.nowEvents {
+    float:left;
+    padding: 1.5em;
+}
+
+    .nowEvents li{
+        margin: 1em 0;
+        padding: 0 1em 0 0;
+    }
+
+
+.nowEvents2 h3{
+    margin: 1.25em 0 0.5em 0;
+}
+
+    .nowEvents2 p {
+        float: left;
+    }
+
+
+
+
+/* 6. INTRODUCTION ---------------------------------------- */
+
+.intro {
+    background-image: url(http://i.imgur.com/zkF0PE5.jpg);
+    background-position: 50% 25%;
+    background-size: cover;
+    width: 64%;
+    float: right;
+    padding: 3%;
+    height: auto; 
+}
+
+    .intro h2 {
+        color: white;
+    }
+
+        .intro h3 {
+            color: white;
+            margin: 4em 0 0 1em;
+        }
+
+            .intro p {
+                margin: 0.5em 0;
+                color: white;
+                width: 60%;
+            }
+
+                .intro img {
+                    margin: 4em 0 0 0;
+                    float: left;
+                    padding: 0 1em 0 0;
+                    height: 4em
+                }
+
+                    .intro img:hover {
+                        opacity: 0.8;
+                        transition: 0.1s;
+                    }
+
+
+
+/* 7. HOME PAGE: NOTICES & UPCOMING EVENTS ------------------------------- */
+
+.notices {
+    margin: 0 0 0 5%;    
+}
+
+    .notices li {
+        padding: 2em;
+        display: inline-block;
+        width: 40%;
+        float: left;   
+    }
+
+        .notices img {
+            object-fit: contain;
+            margin: 1em 0;
+            box-shadow: 5px 5px 5px #b2b2b2;
+        }
+
+            .notices h3 {
+                margin: 0 0 0.5em 0;
+            }
+
+                .notices strong {
+                    float: inherit;
+                    width: 100%;
+                }
+
+                    .notices p {
+                        background: rgba(165, 222, 224, 0.15);
+                        padding: 2.5%;
+                    }
+
+                        .notices p:first-letter {
+                            font-size: 2em;
+                        }
+
+#notices h2{
+    display: inline-block;
+    width: 100%;
+    padding: 3% 0 0 5%;
+    font-size: 3em;
+    border-top: 1px solid lightgrey;
+}
+
+
+
+/* 8. HOME PAGE: WEEKLY NOTICES ---------------------------------------- */
+
+#weeklyNotices ul {
+     margin: 0 0 0 5%;
+}
+
+    #weeklyNotices h2 {
+        font-size: 3em;
+        display: inline-block;
+        width: 100%;
+        border-top: 1px solid lightgrey;
+        padding: 3% 0 0 5%;
+        margin: 5% 0 0 0;
+    }
+
+        #weeklyNotices a {
+            margin: 0% 0 0 6%;
+            width: 100%;
+            float: left;
+        }
+
+
+.weeklyNotices h3 {
+       margin: 0 0 0.5em 0;
+}
+
+    .weeklyNotices li {
+        display: inline-block;
+        width: 17%;
+        height: auto;
+        padding: 2em;
+        float: left;   
+    }
+
+        .weeklyNotices img {
+            object-fit: contain;
+            width: 100%;
+            margin: 1em 0;
+            box-shadow: 5px 5px 5px #b2b2b2;
+        }
+
+            .weeklyNotices p:first-letter {
+                font-size: 2em;
+            }
+
+
+
+/* 9. ART DIARIES PAGE ---------------------------------------- */
+
+.artDiaries {
+    padding: 0 5%;
+    width: auto;
+}
+
+    .artDiaries p {
+        margin: 0 0 2% 0;
+    }
+
+        .artDiaries h3 {
+            margin: 0 0 3% 0;
+        }
+
+            .artDiaries ul {
+                margin: 2% 0;
+                display: block;
+            }
+
+                .artDiaries li {
+                    margin: 5% 0;
+                }
+
+                    .artDiaries li p {
+                        width: 30em;
+                        margin: 3% 5%;
+                    }
+
+                        .artDiaries img{
+                            float: right;
+                            width: 50%;
+                            margin: 0 -3% 0 3%;    
+                        }
+
+
+/* Styling the forms used */
+
+.pure-form {
+    color: #3e3e3e; 
+    font-family: 'Yantramanav', sans-serif;
+}
+
+    .pure-form label {
+        margin: 2% 0 0 0;
+        display: block;
+        width: 70%;
+    }
+
+        .pure-form input {
+            display: block;
+            margin: 1% 0;
+        }
+
+.pure-button {
+    margin: 5% 0;
+}
+
+#artPartner {
+    width: 50%;
+}
+
+#briefDescription {
+    width: 70%;
+    height: 8em
+}
+
+#dateTo {
+    margin: 0;
+}
+
+
+
+/* 10. MEMBERSHIP PAGE ---------------------------------------- */
+
+.membership {
+    padding: 0 5%;
+}
+
+    .membership p {
+        margin: 0 0 2% 0;
+    }
+
+
+#membership h2 {
+    font-size: 2.75em;
+    display: inline-block;
+    width: 100%;
+    padding: 3% 0 0 5%;
+    font-size: 3em;
+    border-top: 1px solid lightgrey;
+}
+
+    #membership img{
+        float: right;
+        width: 33%;
+        margin: 0 3%;
+    }
+
+
+
+/* Styling the price grids */
+.columns {
+    float: left;
+/*    width: 33.3%;*/
+    width: 31%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #3e3e3e; 
+    font-family: 'Yantramanav', sans-serif;
+}
+
+    .price:hover {
+        box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+    }
+
+        .price .header {
+            background-color: #3e3e3e;
+            color: white;
+            font-size: 1.75em;
+            font-family: 'Jaldi', sans-serif;
+        }
+
+            .price li {
+                border-bottom: 1px solid #eee;
+                padding: 7%;
+                text-align: center;
+            }
+
+                .price .grey {
+                     background: rgba(165, 222, 224, 0.15);
+                }
+
+.button {
+    background-color: #5393a0;
+    border: none;
+    color: white;
+    padding: 3% 7%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+
+#donations h2{
+    margin: 5% 5% 0 -5%;
+    width: 110%;
+}
+
+#donations p {
+    padding: 1% 0;
+}
+
+#donations a {
+    font-size: 1.25em;
+}
+
+
+
+
+/* 11. FOOTER ---------------------------------------- */
+
+footer {
+    margin: 5% 0 0 0;
+    float: left;
+    border-top: 1px solid lightgrey;
+    padding: 0 5% 5% 5%;
+}
+
+    footer h2 {
+        margin: 5% 0 1% 0;
+    }
+
+        footer li {
+            display: inline;
+        }
+
+            footer img {
+                margin: 1%;
+                width: 14%;
+                height: 5em;
+                object-fit: contain;
+            }
+
+
+#footerList li{
+    display: inline-block;
+    margin: 0 10% 0 0%;
+}
+
+
+
+
+
+
+/* 12. MEDIA QUERIES ---------------------------------------- */
+
+/* Breakpoints used:
+
+Max-width: 1023px
+Max-width: 720px
+(Max-width: 720px) and (Min-width: 575px)
+Max-width: 574px
+Max-width: 420px 
+
+*/
+
+
+/* Max-width: 1023px ---------------------------------------- */
+
+@media all and (max-width: 1023px) {
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    header {
+        width: 35%;
+    }
+    
+    .intro {
+        width: 55%;
+    }
+    
+    .sidebar {
+        float: right;
+        width: 53%;
+        padding: 3%;
+    }
+    
+    .nowEvents {
+        width: 40%;
+    }
+    
+    .nowEvents2 p {
+        width: 40%;
+    }
+    
+    .notices {
+        margin: 0 0 0 3%;
+    }
+    
+    #notices li {
+        width: 39%;
+    }
+    
+        #notices h2, #membership h2 {
+            font-size: 2.75em;
+            margin: 15% 0 0 0;
+            padding: 3% 0 0 5%;
+        }
+
+    #weeklyNotices h2 {
+        font-size: 2.75em;
+    }
+    
+        #weeklyNotices ul {
+            margin: 0 0 0 5%;
+        }
+
+    .weeklyNotices li {
+        width: 38%;
+        height: 28em;
+    }
+    
+    footer img {
+    margin: 3%;
+    width: 25%;
+    }
+    
+    .pure-form label {
+    margin: 5% 0 0 0;
+    width: 80%;
+    }
+    
+    #membership img {
+    width: 50%;
+    }
+    
+    #donations h2{
+    margin: 5% 5% 0 -5%;
+    }
+}
+
+
+
+/* Max-width: 720px ---------------------------------------- */
+
+@media only screen and (max-width: 720px) {
+    .columns {
+        width: 100%;
+        padding: 5%;
+    }
+    
+    .membership p {
+    margin: 0 0 4% 0;
+    }
+}
+
+
+
+
+/* (Max-width: 720px) and (Min-width: 575px) ---------------------------------------- */
+
+@media screen and (max-width: 720px) and (min-width: 575px) {
+
+    .wrapper {
+        width: 100%;
+    }
+    .notices {
+    margin: 0 0 0 5%;
+    }        
+    
+    #notices li {
+        width: 36%;
+    }
+
+        #notices h2, #membership h2{
+            font-size: 2.5em;
+            padding: 10% 0 0 5%;
+        }
+        
+    #weeklyNotices h2 {
+        font-size: 2.5em;
+    }
+    
+        #weeklyNotices ul {
+            margin: 0 0 0 8%;
+        }
+    
+    .weeklyNotices li {
+        width: 35%;
+        height: 28em;
+    }
+    .pure-form label {
+        margin: 10% 0 0 0;
+    }
+    .artDiaries img{
+        float: right;
+        width: 100%;
+        margin: 0 0 3% 3%;  
+        object-fit: cover;
+        height: 15em;
+    }
+}
+     
+
+
+
+
+/* Max-width: 574px ---------------------------------------- */
+
+@media screen and (max-width: 574px) {
+    
+    .wrapper {
+        width: 100%;
+    }
+        
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    nav a {
+        font-size: 0.9em;
+    }
+    
+        nav li {
+            margin: 5% 5% 0 0;
+            width: auto;
+        }
+    
+    header {
+        width: 100%;
+        float: none;
+        padding: 4%;
+        height: auto;
+    } 
+    
+    .intro {
+        width: 100%;
+        position: relative;
+        float: left;
+        margin: 5% 0;
+        padding: 5%;        
+    }
+    
+     .sidebar {
+        margin: 10% 0 0 0;
+        float: none;
+        width: 100%;
+    }
+    
+    .notices {
+        margin: 0;
+    }
+
+     #notices li {
+        width: 90%;
+        float: none;
+        padding: 5%;
+    }
+    
+        #notices h2, #membership h2 {
+            font-size: 2em;
+            margin: 5% 0 0 0%;
+        }
+    
+    .weeklyNotices li {
+        width: 90%;
+        height: auto;
+        padding: 1%;
+    }
+    
+    #weeklyNotices h2 {
+        font-size: 2em;
+        width: 100%;
+        margin: 5% 5% 0 0;
+        padding: 5% 0 0 5%;
+    }
+    
+        #weeklyNotices ul {
+            margin: 0 0 0 8%;
+        }
+            
+            #weeklyNotices h3 {
+                margin: 15%  0 0 0;
+            }
+
+    footer {
+        margin: 15% 0 0 0;
+    }
+    
+        footer h2 {
+            margin: 15% 0 0 0;
+        }
+    
+            footer img {
+                margin: 3%;
+                width: 43%;
+            }
+    
+    .pure-form label {
+        margin: 7% 0 0 0;
+        width: 100%;
+    }
+    
+    .artDiaries li p {
+        width: auto;
+    }
+    
+    #membership img {
+        width: 100%;
+        padding: 4% 0;
+        object-fit: cover;
+        height: 16em;
+    } 
+    
+    #donations h2{
+        margin: 5% 5% 0 -5%;
+    }
+    
+    .artDiaries img{
+        float: right;
+        width: 100%;
+        margin: 0 0 3% 3%;  
+        object-fit: cover;
+        height: 15em;
+    }
+
+    
+    /* Navigation Hamburger Dropdown Menu Media Queries */
+    
+    ul.topnav li {
+        display: none;
+    }
+
+        ul.topnav li.icon {
+            float: right;
+            display: inline-block;
+            padding: 0;
+            width: 1.25em;
+            margin: 0 10% 0 0;
+      }
+
+    
+    ul.topnav.responsive {
+         position: relative;
+    }
+        ul.topnav.responsive li.icon {
+             position: absolute;
+             right: 0;
+             top: 0;
+         }
+  
+            ul.topnav.responsive li {
+                float: none;
+                display: inline;
+            }
+        
+                ul.topnav.responsive li a {
+                    display: block;
+                    text-align: left;
+                  line-height: 2.5em;
+                }
+}
+
+
+
+/* Max-width: 420px ---------------------------------------- */
+
+@media screen and (max-width: 420px) {
+    .pure-form label {
+    margin: 17% 0 0 0;
+    }
+    
+    .intro p {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
