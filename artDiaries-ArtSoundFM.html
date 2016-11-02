@@ -28,7 +28,7 @@
             
                 <nav>
                     <ul class="topnav" id="myTopnav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home-ArtSoundFM.html">Home</a></li>
                         <li><a href="http://www.artsound.org.au/programs/">Program Schedule</a></li>
                         <li><a class="active" href="artDiaries-ArtSoundFM.html">Art Diaries</a></li>
                         <li><a href="membership-ArtSoundFM.html">Membership & Donations</a></li>
@@ -139,43 +139,58 @@
                             <option>Tuggeranong Arts Centre</option>
                         </select>
 
-                    <label for="email">If your Arts Partner is not on the list</label>
-                    <input id="artPartner" type="email" placeholder="Type your Arts Partner here">
+                    <label for="artsPartner">If your Arts Partner is not on the list</label>
+                    <input id="artPartner" type="text" placeholder="Type your Arts Partner here">
 
                     <label for="eventName">Name of your event</label>
-                    <input id="password" type="password" placeholder="Event Name">
+                    <input id="text" type="text" placeholder="Event Name">
 
                     <textarea id="briefDescription" class="pure-input-1-2" placeholder="Brief description of your event - 250 characters maximum"></textarea>
 
-
                     <label for="date">Date or opening date of event:</label>
-                    <input id="password" type="password" placeholder="Event date">
+                    <input type="date" placeholder="Event date">
 
+                    <label for="date">Closing Date (if applicable):</label>
+                    <input type="date" placeholder="Closing date">
 
-                    <label for="date">Closing Date (if applicable)</label>
-                    <input id="password" type="password" placeholder="Closing date">
+                    <label for="date">Opening hours if applicable:</label>
+                    <input type="time">
+                    
+                    <label for="time" id="dateTo">to</label>
+                    <input type="time">
+                    
+                    <label for="address">Address:</label>
+                    <input id="address" type="text" placeholder="Street address">
+                    
+                    <label for="address">City:</label>
+                    <input id="address" type="text">
+                    
+                    <label for="address">State / Province / Region:</label>
+                    <input id="address" type="text">
+                    
+                    <label for="address">ZIP / Postal Code:</label>
+                    <input id="address" type="text">
+                    
+                    <label for="address">Country:</label>
+                    <input id="address" type="text">
+                    
+                    <label for="url">Web address for information:</label>
+                    <input type="url" placeholder="http://">
 
-                     <label for="date">Opening hours if applicable (24 hour clock):</label>
-                    <input id="password" type="password" placeholder="00:00">
-                     <label for="date" id="dateTo">to</label>
-                    <input id="password" type="password" placeholder="00:00">
+                    <label for="phoneNumber">Phone number for public inquiries:</label>
+                    <input type="tel">
 
-                    <textarea id="briefDescription" class="pure-input-1-2" placeholder="Event address (maximum 250 characters): "></textarea>
+                    <label for="text">First name (required) - not for publication:</label>
+                    <input type="text" placeholder="First name">
+                    
+                    <label for="text">Last name (required) - not for publication:</label>
+                    <input type="text" placeholder="Last name">
 
-                    <label for="date">Web address for information:</label>
-                    <input id="password" type="password" placeholder="http://">
+                    <label for="phoneNumber">Your personal phone number(required) - not for publication:</label>
+                    <input type="tel">
 
-                    <label for="date">Phone number for public inquiries:</label>
-                    <input id="password" type="password" placeholder="http://">
-
-                    <label for="date">Your First name and last name (required) - not for publication:</label>
-                    <input id="password" type="password" placeholder="First & last name">
-
-                    <label for="date">Your phone number(required) - not for publication:</label>
-                    <input id="password" type="password" placeholder="First & last name">
-
-                    <label for="date">Your Email (required) - not for publication:</label>
-                    <input id="password" type="password" placeholder="Email Address">
+                    <label for="email">Your personal Email (required) - not for publication:</label>
+                    <input type="email" placeholder="Email Address">
 
 
                     <label for="remember" class="pure-checkbox">
