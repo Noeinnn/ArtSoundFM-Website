@@ -140,7 +140,7 @@ a:hover {
 }
 
 body {
-    background: #5393a0 url(http://i.imgur.com/65CZmlx.png);
+    background: #0094a2 url(http://i.imgur.com/65CZmlx.png);
 }
 
 .wrapper {
@@ -632,7 +632,7 @@ footer {
 Max-width: 1023px
 Max-width: 720px
 (Max-width: 720px) and (Min-width: 575px)
-Max-width: 574px
+Max-width: 768px
 Max-width: 420px 
 
 */
@@ -780,9 +780,9 @@ Max-width: 420px
 
 
 
-/* Max-width: 574px ---------------------------------------- */
+/* Max-width: 768px ---------------------------------------- */
 
-@media screen and (max-width: 574px) {
+@media screen and (max-width: 768px) {
     
     .wrapper {
         width: 100%;
