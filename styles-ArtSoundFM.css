@@ -587,6 +587,7 @@ footer {
     float: left;
     border-top: 1px solid lightgrey;
     padding: 0 5% 5% 5%;
+    background: #ebf6f8;
 }
 
     footer h2 {
