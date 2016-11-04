@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -34,7 +35,7 @@
                         <li><a href="membership-ArtSoundFM.html">Membership & Donations</a></li>
                         <li><a href="http://www.artsound.org.au/about/">About</a></li>
                         <li><a href="http://www.artsound.org.au/contact-us/">Contact</a></li>
-                        <li><input type="text" name="search" placeholder="Search.."></li>
+                        <li><input type="text" name="search" aria-label="Search" placeholder="Search.."></li>
                         <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><img src="http://i.imgur.com/zguLTwY.png" alt="Navigation Drop Down Menu"></a></li>
                     </ul>
                 </nav>
@@ -108,16 +109,16 @@
             
             <strong id="submitForm">Submit your event to Arts Diary</strong>
 
-            <p>ArtSound Arts Partners receive priority.  Please submit your item at least two weeks prior to your event.</p>
-
-            <p>If you're an ArtSound Arts Partner, tell us which one you are - otherwise please use the Not yet an Arts Partner box below.</p>
+            <p>ArtSound Arts Partners receive priority.  Please submit your item at least two weeks prior to your event. If you're an ArtSound Arts Partner, tell us which one you are - otherwise please use the I am not an Arts Partner option in the box below.</p>
             
-   
+            <p>An asterisk * indicates what fields in the form are mandatory.</p>
+                        
             <form class="pure-form pure-form-stacked">
                 <fieldset>
-                    <label for="artsPartner">Arts  Partner</label>
+                    <legend>Submit your Event to Art Diaries</legend>
+                    <label for="artsPartner" aria-label="selectArtsPartner">Arts  Partner
                         <select id="state">
-                            <option>None</option>
+                            <option>I am not an ArtSound Arts Partner</option>
                             <option>360 Fashion Market</option>
                             <option>ANU School of Music</option>
                             <option>Art Song Canberra</option>
@@ -138,59 +139,73 @@
                             <option>Royal School of Church Music (ACT)</option>
                             <option>Tuggeranong Arts Centre</option>
                         </select>
-
-                    <label for="artsPartner">If your Arts Partner is not on the list</label>
-                    <input id="artPartner" type="text" placeholder="Type your Arts Partner here">
-
-                    <label for="eventName">Name of your event</label>
-                    <input id="text" type="text" placeholder="Event Name">
-
-                    <textarea id="briefDescription" class="pure-input-1-2" placeholder="Brief description of your event - 250 characters maximum"></textarea>
-
-                    <label for="date">Date or opening date of event:</label>
-                    <input type="date" placeholder="Event date">
-
-                    <label for="date">Closing Date (if applicable):</label>
-                    <input type="date" placeholder="Closing date">
-
-                    <label for="date">Opening hours if applicable:</label>
-                    <input type="time">
+                    </label>
                     
-                    <label for="time" id="dateTo">to</label>
-                    <input type="time">
-                    
-                    <label for="address">Address:</label>
-                    <input id="address" type="text" placeholder="Street address">
-                    
-                    <label for="address">City:</label>
-                    <input id="address" type="text">
-                    
-                    <label for="address">State / Province / Region:</label>
-                    <input id="address" type="text">
-                    
-                    <label for="address">ZIP / Postal Code:</label>
-                    <input id="address" type="text">
-                    
-                    <label for="address">Country:</label>
-                    <input id="address" type="text">
-                    
-                    <label for="url">Web address for information:</label>
-                    <input type="url" placeholder="http://">
+                    <label for="artsPartner">If your Arts Partner is not on the list
+                    <input id="artPartner" type="text" placeholder="Type your Arts Partner here" aria-label="artsPartner"></label>
 
-                    <label for="phoneNumber">Phone number for public inquiries:</label>
-                    <input type="tel">
+                    <label for="eventName">Name of your event
+                    <input id="text" type="text" placeholder="Event Name" aria-label="eventName">
+                    </label>
 
-                    <label for="text">First name (required) - not for publication:</label>
-                    <input type="text" placeholder="First name">
+                    <textarea id="briefDescription" class="pure-input-1-2" placeholder="Brief description of your event - 250 characters maximum" aria-label="eventDescription"></textarea>
+
+                    <label for="openingDate">Date or opening date of event:
+                    <input type="date" placeholder="Event date" aria-label="openingDate">
+                    </label>
+
+                    <label for="cloasingDate">Closing Date (if applicable):
+                    <input type="date" placeholder="Closing date" aria-label="closingDate">
+                    </label>
+
+                    <label for="openingHours">Opening hours if applicable:
+                    <input type="time" aria-label="time">
+                    </label>
                     
-                    <label for="text">Last name (required) - not for publication:</label>
-                    <input type="text" placeholder="Last name">
+                    <label for="time" id="dateTo">to
+                    <input type="time" aria-label="time">
+                    </label>
+                    
+                    <label for="streetAddress">Street Address:
+                    <input class="address" type="text" aria-label="streetAddress">
+                    </label>
+                    
+                    <label for="city">City:
+                    <input class="address" type="text" aria-label="city">
+                    </label>
+                    
+                    <label for="state">State / Province / Region:
+                    <input class="address" type="text" aria-label="state">
+                    </label>
+                    
+                    <label for="zipCode">ZIP / Postal Code:
+                    <input id="zipCode" type="text" aria-label="zipCode">
+                    </label>
+                    
+                    <label for="country">Country:
+                    <input class="address" type="text" aria-label="country">
+                    </label>
+                    
+                    <label for="url">Web address for information:<input id="address" type="url" placeholder="www.yourwebsite.com" aria-label="website">
+                    </label>
 
-                    <label for="phoneNumber">Your personal phone number(required) - not for publication:</label>
-                    <input type="tel">
+                    <label for="phoneNumber">Phone number for public inquiries:
+                    <input type="tel" placeholder="+02 123 456 789"></label>
 
-                    <label for="email">Your personal Email (required) - not for publication:</label>
-                    <input type="email" placeholder="Email Address">
+                    <label for="firstName">First name * (not for publication):
+                    <input type="text" placeholder="First name" aria-label="firstName">
+                    </label>
+                    
+                    <label for="lastName">Last name * (not for publication):
+                    <input type="text" placeholder="Last name" aria-label="lastName">
+                    </label>
+
+                    <label for="phoneNumber">Your personal phone number * (not for publication):
+                    <input type="tel" placeholder="+02 123 456 789"></label>
+
+                    <label for="email">Your personal Email * (not for publication):
+                    <input id="address" type="email" placeholder="your@email.com" aria-label="emailAddress">
+                    </label>
 
 
                     <label for="remember" class="pure-checkbox">
